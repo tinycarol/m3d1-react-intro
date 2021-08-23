@@ -1,17 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+/* const element = document.createElement("div");
+element.classList.add("my-class");
+element.style = "color: red";
+element.innerText = "Ola k ase";
+otherElement.appendChild(element); */
+
+/* const element = React.createElement(
+  'div',
+  {
+    className: 'my-class',
+    style: { color: 'red', backgroundColor: 'black' },
+  },
+  'Ola k ase'
+); */
+
+const user = {
+  name: 'Pepe',
+  lastName: 'Pérez',
+};
+
+const element = (
+  <div className='home'>
+    <h1>Hello {user.name}, welcome to React!</h1>
+    <p>Let me be your guide</p>
+    <img
+      src='https://i.imgur.com/x17K5U4.gif'
+      alt='A kid using a keyboard as a surf board'
+    />
+    <button className='btn btn-primary'>Click me</button>
+  </div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(element, document.getElementById('root'));
